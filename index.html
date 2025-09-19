@@ -9,23 +9,23 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* ===== VARIÁVEIS DE CONTROLE ===== */
+    /* ===== VARIÁVEIS DE CONTROLE - TEMA DESERTO ===== */
     :root {
-      /* Cores principais */
-      --primary-dark: #0a0a0a;
-      --secondary-dark: #1a1a1a;
-      --accent-red: #cc0000;
-      --accent-purple: #6600cc;
-      --accent-blue: #0066cc;
-      --accent-green: #00cc66;
-      --text-primary: #e6e6e6;
-      --text-secondary: #b3b3b3;
+      /* Cores principais - Tema Amarelo/Deserto */
+      --primary-desert: #2c1810;
+      --secondary-desert: #4a2c1a;
+      --accent-sand: #d4a574;
+      --accent-gold: #f4c430;
+      --accent-orange: #ff8c42;
+      --accent-brown: #8b4513;
+      --text-primary: #f5e6d3;
+      --text-secondary: #d4a574;
       
       /* Elementos de UI */
-      --card-bg: rgba(30, 30, 30, 0.9);
-      --card-border: 1px solid rgba(102, 0, 204, 0.5);
-      --glow-effect: 0 0 15px rgba(204, 0, 0, 0.6);
-      --card-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+      --card-bg: rgba(74, 44, 26, 0.9);
+      --card-border: 1px solid rgba(244, 196, 48, 0.5);
+      --glow-effect: 0 0 15px rgba(255, 140, 66, 0.6);
+      --card-shadow: 0 8px 25px rgba(44, 24, 16, 0.6);
     }
     
     /* ===== ESTILOS GERAIS ===== */
@@ -36,11 +36,11 @@
     }
     
     body { 
-      background-color: var(--primary-dark);
+      background-color: var(--primary-desert);
       background-image: 
-        radial-gradient(circle at 15% 50%, rgba(102, 0, 204, 0.15) 0%, transparent 25%),
-        radial-gradient(circle at 85% 30%, rgba(204, 0, 0, 0.15) 0%, transparent 25%),
-        radial-gradient(circle at 50% 80%, rgba(0, 102, 204, 0.15) 0%, transparent 25%);
+        radial-gradient(circle at 15% 50%, rgba(244, 196, 48, 0.15) 0%, transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(255, 140, 66, 0.15) 0%, transparent 25%),
+        radial-gradient(circle at 50% 80%, rgba(212, 165, 116, 0.15) 0%, transparent 25%);
       color: var(--text-primary); 
       line-height: 1.6; 
       font-family: 'Roboto', sans-serif;
@@ -71,7 +71,7 @@
       left: 0; 
       width: 100%; 
       height: 100%; 
-      background: var(--primary-dark); 
+      background: var(--primary-desert); 
       display: flex; 
       justify-content: center; 
       align-items: center; 
@@ -83,9 +83,9 @@
     .loading-spinner { 
       width: 60px; 
       height: 60px; 
-      border: 4px solid rgba(204, 0, 0, 0.2); 
+      border: 4px solid rgba(255, 140, 66, 0.2); 
       border-radius: 50%; 
-      border-top-color: var(--accent-red); 
+      border-top-color: var(--accent-orange); 
       animation: spin 1s linear infinite; 
       margin-bottom: 20px; 
     }
@@ -108,7 +108,7 @@
       align-items: center; 
       padding: 20px 0; 
       margin-bottom: 30px; 
-      border-bottom: 1px solid rgba(102, 0, 204, 0.3);
+      border-bottom: 1px solid rgba(244, 196, 48, 0.3);
       animation: slideDown 0.7s ease; 
     }
     
@@ -128,7 +128,7 @@
       height: 60px; 
       border-radius: 50%; 
       object-fit: cover;
-      border: 2px solid var(--accent-purple);
+      border: 2px solid var(--accent-gold);
       box-shadow: var(--glow-effect);
       transition: transform 0.3s ease;
       filter: hue-rotate(0deg) brightness(1.1);
@@ -136,17 +136,17 @@
     
     .logo img:hover {
       transform: rotate(10deg);
-      filter: hue-rotate(45deg) brightness(1.2);
+      filter: hue-rotate(15deg) brightness(1.2);
     }
     
     .logo h1 { 
       font-size: 28px; 
-      background: linear-gradient(135deg, var(--accent-red), var(--accent-purple));
+      background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold));
       -webkit-background-clip: text; 
       -webkit-text-fill-color: transparent; 
       font-weight: 800;
       letter-spacing: 1px;
-      text-shadow: 0 0 5px rgba(204, 0, 0, 0.3);
+      text-shadow: 0 0 5px rgba(255, 140, 66, 0.3);
     }
     
     .logo span { 
@@ -162,8 +162,8 @@
     }
     
     .header-btn { 
-      background: rgba(30, 30, 30, 0.8); 
-      border: 1px solid rgba(102, 0, 204, 0.5); 
+      background: rgba(74, 44, 26, 0.8); 
+      border: 1px solid rgba(244, 196, 48, 0.5); 
       color: var(--text-primary); 
       padding: 8px 15px; 
       border-radius: 20px; 
@@ -173,15 +173,97 @@
       gap: 8px; 
       font-size: 14px; 
       transition: all 0.3s; 
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 3px 10px rgba(44, 24, 16, 0.3);
     }
     
     .header-btn:hover { 
-      background: linear-gradient(135deg, var(--accent-red), var(--accent-purple));
+      background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold));
       color: #fff; 
       transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(204, 0, 0, 0.3);
+      box-shadow: 0 5px 15px rgba(255, 140, 66, 0.3);
       border-color: transparent;
+    }
+    
+    /* GitHub Stats Section */
+    .github-stats {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    
+    .stat-card {
+      background: var(--card-bg);
+      border: var(--card-border);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      min-width: 120px;
+      box-shadow: var(--card-shadow);
+      transition: transform 0.3s ease;
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .stat-number {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--accent-gold);
+      display: block;
+    }
+    
+    .stat-label {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-top: 5px;
+    }
+    
+    /* Contributors Section */
+    .contributors-section {
+      margin-bottom: 50px;
+    }
+    
+    .contributors-grid {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    
+    .contributor-card {
+      background: var(--card-bg);
+      border: var(--card-border);
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      box-shadow: var(--card-shadow);
+    }
+    
+    .contributor-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .contributor-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      border: 2px solid var(--accent-gold);
+    }
+    
+    .contributor-name {
+      font-size: 14px;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+    
+    .contributor-name:hover {
+      color: var(--accent-gold);
     }
     
     /* Hero Section */
@@ -189,7 +271,7 @@
       text-align: center; 
       margin-bottom: 50px; 
       padding: 50px 40px; 
-      background: rgba(26, 26, 26, 0.7); 
+      background: rgba(74, 44, 26, 0.7); 
       border-radius: 15px; 
       box-shadow: var(--card-shadow);
       border: var(--card-border);
@@ -205,7 +287,7 @@
       right: -50%;
       width: 100%;
       height: 200%;
-      background: radial-gradient(circle, rgba(102, 0, 204, 0.1) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(244, 196, 48, 0.1) 0%, transparent 70%);
       z-index: 0;
     }
     
@@ -217,10 +299,10 @@
     .hero h2 { 
       font-size: 36px; 
       margin-bottom: 15px; 
-      background: linear-gradient(135deg, var(--accent-red), var(--accent-purple));
+      background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold));
       -webkit-background-clip: text; 
       -webkit-text-fill-color: transparent; 
-      text-shadow: 0 0 10px rgba(204, 0, 0, 0.3);
+      text-shadow: 0 0 10px rgba(255, 140, 66, 0.3);
     }
     
     .hero p { 
@@ -234,8 +316,8 @@
       font-style: italic;
       margin-top: 20px;
       padding: 15px;
-      border-left: 3px solid var(--accent-purple);
-      background: rgba(102, 0, 204, 0.1);
+      border-left: 3px solid var(--accent-gold);
+      background: rgba(244, 196, 48, 0.1);
       border-radius: 5px;
       font-size: 18px;
     }
@@ -249,7 +331,7 @@
     }
     
     .cta-button { 
-      background: linear-gradient(135deg, var(--accent-red), var(--accent-purple));
+      background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold));
       color: white; 
       border: none; 
       padding: 14px 35px; 
@@ -262,17 +344,17 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      box-shadow: 0 5px 15px rgba(204, 0, 0, 0.3);
+      box-shadow: 0 5px 15px rgba(255, 140, 66, 0.3);
     }
     
     .cta-button.github {
-      background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
-      animation: pulsePurple 2s infinite;
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-brown));
+      animation: pulseGold 2s infinite;
     }
     
     .cta-button:hover { 
       transform: translateY(-3px); 
-      box-shadow: 0 8px 20px rgba(204, 0, 0, 0.5); 
+      box-shadow: 0 8px 20px rgba(255, 140, 66, 0.5); 
     }
     
     @keyframes pulse { 
@@ -280,9 +362,9 @@
       50% { transform: scale(1.05); } 
     }
     
-    @keyframes pulsePurple { 
-      0%, 100% { transform: scale(1); box-shadow: 0 5px 15px rgba(102, 0, 204, 0.3); } 
-      50% { transform: scale(1.05); box-shadow: 0 8px 20px rgba(102, 0, 204, 0.5); } 
+    @keyframes pulseGold { 
+      0%, 100% { transform: scale(1); box-shadow: 0 5px 15px rgba(244, 196, 48, 0.3); } 
+      50% { transform: scale(1.05); box-shadow: 0 8px 20px rgba(244, 196, 48, 0.5); } 
     }
     
     /* Section Titles */
@@ -290,12 +372,12 @@
       text-align: center; 
       font-size: 32px; 
       margin-bottom: 40px; 
-      background: linear-gradient(135deg, var(--accent-red), var(--accent-purple));
+      background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold));
       -webkit-background-clip: text; 
       -webkit-text-fill-color: transparent; 
       position: relative; 
       padding-bottom: 15px; 
-      text-shadow: 0 0 10px rgba(204, 0, 0, 0.3);
+      text-shadow: 0 0 10px rgba(255, 140, 66, 0.3);
     }
     
     .section-title::after { 
@@ -306,7 +388,7 @@
       transform: translateX(-50%); 
       width: 80px; 
       height: 3px; 
-      background: linear-gradient(90deg, var(--accent-red), var(--accent-purple));
+      background: linear-gradient(90deg, var(--accent-orange), var(--accent-gold));
       border-radius: 2px;
     }
     
@@ -337,7 +419,7 @@
       left: 0;
       width: 100%;
       height: 4px;
-      background: linear-gradient(90deg, var(--accent-red), var(--accent-purple));
+      background: linear-gradient(90deg, var(--accent-orange), var(--accent-gold));
       transform: scaleX(0);
       transform-origin: left;
       transition: transform 0.4s ease;
@@ -349,8 +431,8 @@
     
     .feature-card:hover { 
       transform: translateY(-8px); 
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7); 
-      border-color: rgba(102, 0, 204, 0.5);
+      box-shadow: 0 10px 25px rgba(44, 24, 16, 0.7); 
+      border-color: rgba(244, 196, 48, 0.5);
     }
     
     .feature-card h3 { 
@@ -363,7 +445,7 @@
     }
     
     .feature-card h3 i {
-      background: linear-gradient(135deg, var(--accent-red), var(--accent-purple));
+      background: linear-gradient(135deg, var(--accent-orange), var(--accent-gold));
       -webkit-background-clip: text; 
       -webkit-text-fill-color: transparent; 
     }
@@ -383,7 +465,7 @@
     .command-category h3 {
       font-size: 24px;
       margin-bottom: 20px;
-      color: var(--accent-purple);
+      color: var(--accent-gold);
       display: flex;
       align-items: center;
       gap: 10px;
@@ -397,17 +479,17 @@
     }
     
     .command-item {
-      background: rgba(40, 40, 40, 0.7);
+      background: rgba(74, 44, 26, 0.7);
       padding: 12px 15px;
       border-radius: 8px;
       font-family: monospace;
       font-size: 14px;
-      border-left: 3px solid var(--accent-red);
+      border-left: 3px solid var(--accent-orange);
       transition: all 0.3s;
     }
     
     .command-item:hover {
-      background: rgba(50, 50, 50, 0.9);
+      background: rgba(84, 54, 36, 0.9);
       transform: translateX(5px);
     }
     
@@ -424,11 +506,11 @@
     .guide-section h3 {
       font-size: 24px;
       margin-bottom: 20px;
-      color: var(--accent-red);
+      color: var(--accent-orange);
     }
     
     pre {
-      background: rgba(20, 20, 20, 0.8);
+      background: rgba(44, 24, 16, 0.8);
       padding: 20px;
       border-radius: 8px;
       overflow-x: auto;
@@ -436,15 +518,15 @@
       color: var(--text-primary);
       font-family: monospace;
       line-height: 1.5;
-      border: 1px solid rgba(102, 0, 204, 0.3);
+      border: 1px solid rgba(244, 196, 48, 0.3);
     }
     
     code {
-      background: rgba(20, 20, 20, 0.8);
+      background: rgba(44, 24, 16, 0.8);
       padding: 3px 6px;
       border-radius: 4px;
       font-family: monospace;
-      color: var(--accent-green);
+      color: var(--accent-sand);
     }
     
     /* Floating Buttons */
@@ -460,7 +542,7 @@
       transition: 0.3s; 
       z-index: 100; 
       animation: bounce 2s infinite; 
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 5px 15px rgba(44, 24, 16, 0.3);
     }
     
     .whatsapp-float { 
@@ -472,14 +554,8 @@
     .github-float {
       bottom: 110px;
       right: 25px;
-      background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
-      animation: bouncePurple 2s infinite;
-    }
-    
-    .telegram-float {
-      bottom: 195px;
-      right: 25px;
-      background: linear-gradient(135deg, #0088cc, #005f8d);
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-brown));
+      animation: bounceGold 2s infinite;
     }
     
     .float-btn i { 
@@ -496,7 +572,7 @@
       50% { transform: translateY(-10px); } 
     }
     
-    @keyframes bouncePurple { 
+    @keyframes bounceGold { 
       0%, 100% { transform: translateY(0); } 
       50% { transform: translateY(-10px); } 
     }
@@ -506,7 +582,7 @@
       text-align: center; 
       padding: 40px 0; 
       margin-top: 60px; 
-      border-top: 1px solid rgba(102, 0, 204, 0.3); 
+      border-top: 1px solid rgba(244, 196, 48, 0.3); 
       color: var(--text-secondary); 
       font-size: 15px; 
       animation: fadeIn 1s ease; 
@@ -515,13 +591,13 @@
     .footer-links a { 
       margin: 0 12px; 
       text-decoration: none; 
-      color: var(--accent-purple); 
+      color: var(--accent-gold); 
       font-weight: 500; 
       transition: 0.3s;
     }
     
     .footer-links a:hover { 
-      color: var(--accent-red);
+      color: var(--accent-orange);
       text-decoration: underline;
     }
     
@@ -535,7 +611,7 @@
     }
     
     .footer-contact a {
-      color: var(--accent-purple);
+      color: var(--accent-gold);
       text-decoration: none;
       display: flex;
       align-items: center;
@@ -543,7 +619,7 @@
     }
     
     .footer-contact a:hover {
-      color: var(--accent-red);
+      color: var(--accent-orange);
       text-decoration: underline;
     }
     
@@ -560,6 +636,15 @@
       
       .commands-grid {
         grid-template-columns: 1fr;
+      }
+      
+      .github-stats {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .contributors-grid {
+        justify-content: center;
       }
       
       header { 
@@ -601,10 +686,6 @@
       .github-float {
         bottom: 90px;
       }
-      
-      .telegram-float {
-        bottom: 160px;
-      }
     }
   </style>
 </head>
@@ -620,7 +701,7 @@
   <div class="container">
     <header>
       <div class="logo">
-        <img src="https://nosense.neocities.org/perfil.png" alt="Logo NoSenseBot">
+        <img src="https://nosense.neocities.org/d7c063aca8413410473e0cfa32208130.jpg" alt="Logo NoSenseBot">
         <div>
           <h1>NOSENSEBOT</h1>
           <span>Bot Avançado para WhatsApp</span>
@@ -633,57 +714,81 @@
       </div>
     </header>
     
+    <!-- Seção de Estatísticas do GitHub -->
+    <section class="github-stats" id="githubStats">
+      <div class="stat-card">
+        <span class="stat-number" id="starsCount">-</span>
+        <div class="stat-label">⭐ Estrelas</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" id="issuesCount">-</span>
+        <div class="stat-label">🐛 Issues</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" id="contributorsCount">-</span>
+        <div class="stat-label">👥 Contribuidores</div>
+      </div>
+    </section>
+    
     <section class="hero">
       <div class="hero-content">
-        <h2>NoSenseBot - Bot Avançado para WhatsApp</h2>
-        <p>Um bot completo com mais de 100 comandos úteis e divertidos para seu WhatsApp.</p>
+        <h2>NoSenseBot - Um bot completo para o WhatsApp 🚀</h2>
+        <p>Cara, esse bot é simplesmente incrível! Mais de 100 comandos que vão deixar seu grupo muito mais divertido e útil.</p>
         <div class="slogan-secondary">
-          <p>Use gratuitamente adicionando o número 99984271816 ao seu grupo!</p>
+          <p>É só adicionar o número 99984271816 no seu grupo e pronto! Diversão garantida! 🎉</p>
         </div>
         <div class="cta-buttons">
-          <button class="cta-button" id="addToGroupBtn"><i class="fab fa-whatsapp"></i> Adicionar ao Grupo</button>
-          <button class="cta-button github"><i class="fab fa-github"></i> Ver Código Fonte</button>
+          <button class="cta-button" id="addToGroupBtn"><i class="fab fa-whatsapp"></i> Adicionar no Grupo</button>
+          <button class="cta-button github"><i class="fab fa-github"></i> Ver o Código</button>
         </div>
       </div>
     </section>
     
+    <!-- Seção de Contribuidores -->
+    <section class="contributors-section">
+      <h2 class="section-title">Nossos Heróis Desenvolvedores 🦸‍♂️</h2>
+      <div class="contributors-grid" id="contributorsGrid">
+        <!-- Os contribuidores serão carregados dinamicamente via JavaScript -->
+      </div>
+    </section>
+    
     <section>
-      <h2 class="section-title">Recursos Principais</h2>
+      <h2 class="section-title">Por Que Você Vai Amar o NoSenseBot? 💖</h2>
       <div class="features-grid">
         <div class="feature-card">
-          <h3><i class="fas fa-cogs"></i> +100 Comandos</h3>
-          <div class="description">Diversos comandos úteis e divertidos para administração de grupos, utilidades, jogos e muito mais.</div>
+          <h3><i class="fas fa-cogs"></i> +100 Comandos Incríveis</h3>
+          <div class="description">Cara, são tantos comandos que você nem vai conseguir usar todos! Tem coisa para administrar grupo, se divertir, fazer consultas... É comando que não acaba mais!</div>
         </div>
         
         <div class="feature-card">
-          <h3><i class="fas fa-shield-alt"></i> Sistema Anti-Spam</h3>
-          <div class="description">Proteção contra links, spam, flood e conteúdos indesejados em seus grupos.</div>
+          <h3><i class="fas fa-shield-alt"></i> Proteção Anti-Chatos</h3>
+          <div class="description">Chega de spam e links suspeitos! O bot cuida do seu grupo como um verdadeiro segurança virtual. Nada de flood ou conteúdo indesejado passa batido!</div>
         </div>
         
         <div class="feature-card">
-          <h3><i class="fas fa-tools"></i> Ferramentas Úteis</h3>
-          <div class="description">Consulta de CEP, CPF, CNPJ, placas de carro, dados de IP e muitas outras utilidades.</div>
+          <h3><i class="fas fa-tools"></i> Ferramentas Úteis Demais</h3>
+          <div class="description">Precisa consultar CEP? CPF? CNPJ? Placa de carro? O bot faz tudo isso e muito mais! É como ter um assistente pessoal no seu bolso.</div>
         </div>
         
         <div class="feature-card">
-          <h3><i class="fas fa-gamepad"></i> Jogos e Diversão</h3>
-          <div class="description">Cassino virtual, sistema de luta, jogos de dados e muito mais para entreter seus grupos.</div>
+          <h3><i class="fas fa-gamepad"></i> Diversão Garantida</h3>
+          <div class="description">Cassino virtual, jogos de luta, dados e muito mais! Seu grupo nunca mais vai ficar parado. É entretenimento 24/7!</div>
         </div>
         
         <div class="feature-card">
-          <h3><i class="fas fa-robot"></i> Fácil Instalação</h3>
-          <div class="description">Instale facilmente no Termux, Ubuntu, Kali Linux ou Fedora com nossos scripts de instalação.</div>
+          <h3><i class="fas fa-robot"></i> Super Fácil de Usar</h3>
+          <div class="description">Instalar é moleza! Funciona no Termux, Ubuntu, Kali Linux... Nossos scripts fazem tudo automaticamente. É só seguir o passo a passo!</div>
         </div>
         
         <div class="feature-card">
-          <h3><i class="fas fa-code"></i> Código Aberto</h3>
-          <div class="description">Projeto open-source, permitindo personalizações e contribuições da comunidade.</div>
+          <h3><i class="fas fa-code"></i> Código Aberto e Livre</h3>
+          <div class="description">O projeto é open-source, então você pode mexer, personalizar e contribuir! A comunidade está sempre melhorando o bot.</div>
         </div>
       </div>
     </section>
     
     <section>
-      <h2 class="section-title">Comandos Disponíveis</h2>
+      <h2 class="section-title">Comandos Disponíveis 📋</h2>
       
       <div class="command-category">
         <h3><i class="fas fa-crown"></i> Comandos de Administração</h3>
@@ -705,10 +810,7 @@
         <h3><i class="fas fa-shield-alt"></i> Sistema Anti-Spam</h3>
         <div class="commands-grid">
           <div class="command-item">!anti-link</div>
-          <div class="command-item">!anti-audio</div>
-          <div class="command-item">!anti-sticker</div>
-          <div class="command-item">!anti-video</div>
-          <div class="command-item">!anti-document</div>
+          <div class="command-item">!anti-palavrao</div>
         </div>
       </div>
       
@@ -741,7 +843,6 @@
           <div class="command-item">!traduzir</div>
           <div class="command-item">!vagas30</div>
           <div class="command-item">!nif</div>
-          <div class="command-item">!espanhola</div>
           <div class="command-item">!google-led</div>
           <div class="command-item">!resumir</div>
           <div class="command-item">!wiki</div>
@@ -766,26 +867,32 @@
     </section>
     
     <section class="guide-section">
-      <h2 class="section-title">Como Instalar</h2>
+      <h2 class="section-title">Como Instalar (É Moleza!) 🛠️</h2>
       
-      <h3><i class="fab fa-android"></i> Instalação no Termux</h3>
+      <h3><i class="fab fa-android"></i> No Termux (Android)</h3>
+      <p>Cola esse comando no seu Termux e deixa rolar:</p>
       <pre>pkg upgrade -y && pkg update -y && pkg install git -y && pkg install nodejs-lts -y && pkg install ffmpeg -y && pkg install unzip -y && pkg install python python-pip && npm install moment jsdom axios cheerio && npm install node-summarizer && npm install google-translate-api-x && npm install natural stopword lodash compromise sentiment && npm install node-fetch whois-json qrcode libphonenumber-js google-libphonenumber wikijs mathjs</pre>
       
-      <h3><i class="fab fa-ubuntu"></i> Instalação no Ubuntu</h3>
+      <h3><i class="fab fa-ubuntu"></i> No Ubuntu/Linux</h3>
+      <p>Para quem usa Linux, é assim:</p>
       <pre>sudo apt update && sudo apt upgrade -y
 sudo apt install -y git nodejs ffmpeg unzip python3 python3-pip
 npm install moment jsdom axios cheerio node-summarizer google-translate-api-x natural stopword lodash compromise sentiment node-fetch whois-json qrcode libphonenumber-js google-libphonenumber wikijs mathjs</pre>
       
-      <h3><i class="fas fa-download"></i> Clonar e Executar</h3>
-      <pre>git clone https://github.com/bragadev1234/NoSenseBot.git
-cd NoSenseBot
+      <h3><i class="fas fa-download"></i> Baixar e Rodar</h3>
+      <p>Agora é só clonar o repositório e mandar ver:</p>
+      <pre>wget https://github.com/bragadev1234/NoSenseBot/archive/refs/heads/main.zip -O nosense-bot.zip
+unzip nosense-bot.zip
+mv nosense-bot-Bot-main bot
+cd bot
+chmod -R 755 ./*
 npm start</pre>
     </section>
     
     <section class="guide-section">
-      <h2 class="section-title">Como Usar</h2>
-      <p>Para usar o bot gratuitamente, basta adicionar o número <code>99984271816</code> ao seu grupo do WhatsApp.</p>
-      <p>Para comandos VIP e consultas de dados mais detalhadas, entre em contato conosco.</p>
+      <h2 class="section-title">Como Usar 📱</h2>
+      <p>Quer usar o bot de graça? É só adicionar o número <code>99984271816</code> no seu grupo do WhatsApp e pronto!</p>
+      <p>Se quiser comandos VIP e consultas mais detalhadas, é só entrar em contato com a gente. Temos planos especiais para quem quer ainda mais funcionalidades!</p>
     </section>
   </div>
   
@@ -797,26 +904,73 @@ npm start</pre>
     <i class="fab fa-github"></i>
   </div>
   
-  <div class="float-btn telegram-float" id="telegramFloat">
-    <i class="fab fa-telegram"></i>
-  </div>
-  
   <footer>
-    <p>&copy; 2023 NoSenseBot - Todos os direitos reservados</p>
+    <p>&copy; 2025 NoSenseBot - Feito com muito ❤️ e café</p>
     <div class="footer-links">
       <a href="https://github.com/bragadev1234/NoSenseBot">GitHub</a>
-      <a href="#">Termos de Uso</a>
-      <a href="#">Política de Privacidade</a>
+      <a href="https://github.com/nosensesae0/nosensesae/blob/main/termos-de-uso-privacidade.md">Termos de Uso</a>
     </div>
     <div class="footer-contact">
       <a href="mailto:nosensesae@protonmail.com"><i class="fas fa-envelope"></i> nosensesae@protonmail.com</a>
-      <a href="https://t.me/nosensesae" target="_blank"><i class="fab fa-telegram"></i> @nosensesae</a>
     </div>
     <p class="credits">Desenvolvido por Bragadev & NoSenseSae</p>
   </footer>
   
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
+    // Função para buscar dados do GitHub
+    async function fetchGitHubData(owner, repo) {
+      try {
+        const repoResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
+        if (!repoResponse.ok) {
+          throw new Error(`GitHub API error for repository data: ${repoResponse.statusText}`);
+        }
+        const repoData = await repoResponse.json();
+
+        const contributorsResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}/contributors`);
+        if (!contributorsResponse.ok) {
+          throw new Error(`GitHub API error for contributors: ${contributorsResponse.statusText}`);
+        }
+        const contributorsData = await contributorsResponse.json();
+
+        const stars = repoData.stargazers_count;
+        const issues = repoData.open_issues_count;
+        const contributors = contributorsData.map(contributor => ({
+          login: contributor.login,
+          avatar_url: contributor.avatar_url,
+          html_url: contributor.html_url
+        }));
+
+        return { stars, issues, contributors };
+      } catch (error) {
+        console.error("Erro ao buscar dados do GitHub:", error);
+        return null;
+      }
+    }
+
+    // Função para atualizar as estatísticas na página
+    function updateGitHubStats(data) {
+      if (data) {
+        document.getElementById('starsCount').textContent = data.stars;
+        document.getElementById('issuesCount').textContent = data.issues;
+        document.getElementById('contributorsCount').textContent = data.contributors.length;
+        
+        // Atualizar lista de contribuidores
+        const contributorsGrid = document.getElementById('contributorsGrid');
+        contributorsGrid.innerHTML = '';
+        
+        data.contributors.forEach(contributor => {
+          const contributorCard = document.createElement('div');
+          contributorCard.className = 'contributor-card';
+          contributorCard.innerHTML = `
+            <img src="${contributor.avatar_url}" alt="${contributor.login}" class="contributor-avatar">
+            <a href="${contributor.html_url}" target="_blank" class="contributor-name">@${contributor.login}</a>
+          `;
+          contributorsGrid.appendChild(contributorCard);
+        });
+      }
+    }
+
     document.addEventListener('DOMContentLoaded', function() {
       // Remover tela de carregamento
       setTimeout(() => {
@@ -826,19 +980,24 @@ npm start</pre>
         }, 500);
       }, 1500);
       
+      // Buscar dados do GitHub
+      fetchGitHubData('bragadev1234', 'NoSenseBot').then(data => {
+        updateGitHubStats(data);
+      });
+      
       // Inicializar efeito de partículas
       if (typeof particlesJS !== 'undefined') {
         particlesJS('particles-js', {
           particles: {
             number: { value: 80, density: { enable: true, value_area: 800 } },
-            color: { value: "#6600cc" },
+            color: { value: "#f4c430" },
             shape: { type: "circle" },
             opacity: { value: 0.5, random: true },
             size: { value: 3, random: true },
             line_linked: {
               enable: true,
               distance: 150,
-              color: "#cc0000",
+              color: "#ff8c42",
               opacity: 0.4,
               width: 1
             },
@@ -885,10 +1044,6 @@ npm start</pre>
         window.open('https://github.com/bragadev1234/NoSenseBot', '_blank');
       });
       
-      document.getElementById('telegramFloat').addEventListener('click', function() {
-        window.open('https://t.me/nosensesae', '_blank');
-      });
-      
       document.querySelector('.cta-button.github').addEventListener('click', function() {
         window.open('https://github.com/bragadev1234/NoSenseBot', '_blank');
       });
@@ -907,3 +1062,4 @@ npm start</pre>
   </script>
 </body>
 </html>
+
